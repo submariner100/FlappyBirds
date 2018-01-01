@@ -13,6 +13,7 @@
 		27497F521FE8263C007845DD /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27497F511FE8263C007845DD /* SKNode+Extensions.swift */; };
 		275596A61FDEF536000A1ADD /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275596A51FDEF536000A1ADD /* Block.swift */; };
 		27A104091FDC904E00BB1683 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A104081FDC904E00BB1683 /* Configuration.swift */; };
+		27C07BE31FFAED1B0084B811 /* SpriteKitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */; };
 		27C77F171FF96EA400EDE264 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C77F161FF96EA400EDE264 /* MenuScene.swift */; };
 		27C77F191FF96EC900EDE264 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C77F181FF96EC900EDE264 /* LevelScene.swift */; };
 		27C9664E1FDAFA6D00499A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9664D1FDAFA6D00499A0B /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 		27497F511FE8263C007845DD /* SKNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
 		275596A51FDEF536000A1ADD /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		27A104081FDC904E00BB1683 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitButton.swift; sourceTree = "<group>"; };
 		27C77F161FF96EA400EDE264 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		27C77F181FF96EC900EDE264 /* LevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		27C9664A1FDAFA6D00499A0B /* FlappyBirds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBirds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				27497F511FE8263C007845DD /* SKNode+Extensions.swift */,
+				27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				27497F521FE8263C007845DD /* SKNode+Extensions.swift in Sources */,
 				275596A61FDEF536000A1ADD /* Block.swift in Sources */,
 				27C77F171FF96EA400EDE264 /* MenuScene.swift in Sources */,
+				27C07BE31FFAED1B0084B811 /* SpriteKitButton.swift in Sources */,
 				27A104091FDC904E00BB1683 /* Configuration.swift in Sources */,
 				27C966561FDAFA6D00499A0B /* GameViewController.swift in Sources */,
 				271A3A8D1FDB0FDC007BCBEC /* GameCamera.swift in Sources */,
