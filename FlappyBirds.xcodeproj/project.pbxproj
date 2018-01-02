@@ -87,7 +87,6 @@
 		271A3A891FDB0A85007BCBEC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				27C9664F1FDAFA6D00499A0B /* GameScene_1.sks */,
 				27C966531FDAFA6D00499A0B /* GameScene.swift */,
 				27C77F161FF96EA400EDE264 /* MenuScene.swift */,
 				27C77F181FF96EC900EDE264 /* LevelScene.swift */,
@@ -122,6 +121,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		275DE11D1FFC2DFF00C651FD /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				27C9664F1FDAFA6D00499A0B /* GameScene_1.sks */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
 		27C966411FDAFA6D00499A0B = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +149,7 @@
 		27C9664C1FDAFA6D00499A0B /* FlappyBirds */ = {
 			isa = PBXGroup;
 			children = (
+				275DE11D1FFC2DFF00C651FD /* Levels */,
 				271A3A8B1FDB0FA9007BCBEC /* Custom Nodes */,
 				27C9665F1FDAFA6D00499A0B /* Info.plist */,
 				271A3A8A1FDB0B09007BCBEC /* TileSets */,
