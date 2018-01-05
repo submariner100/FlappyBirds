@@ -13,9 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		if let url = Bundle.main.url(forResource: "Levels", withExtension: "plist") {
+		do {
+			let data = try Data(contentsOf: url)
+			guard let levelsDictionary = try PropertyListSerialization.propertyList(from: data, options:[], format: nil) as? [String:Any] else {
+				print("Could not initialise levelsDictionary")
+				return false
+			}
+			Levels.levelsDictionary = levelsDictionary
+		} catch {
+			print(error)
+		}
+	}
+		
 		return true
 	}
 
@@ -40,7 +52,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(_ application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
-
 }
-

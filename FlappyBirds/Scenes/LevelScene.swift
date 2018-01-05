@@ -18,6 +18,12 @@ class LevelScene: SKScene {
 	}
 	
 	func setupLevelSelection() {
+		let background = SKSpriteNode(imageNamed: "levelBackground")
+		background.position = CGPoint(x: frame.midX, y: frame.midY)
+		background.aspectScale(to: frame.size, width: true, multiplier: 1.0)
+		background.zPosition = ZPosition.background
+		addChild(background)
+		
 		var level = 1
 		let columnStartingPoint = frame.midX/2
 		let rowStartingPoint = frame.midY + frame.midY/2
@@ -26,7 +32,6 @@ class LevelScene: SKScene {
 				let levelBoxButton = SpriteKitButton(defaultButtonImage: "woodButton", action: goToGameSceneFor, index: level)
 				levelBoxButton.position = CGPoint(x: columnStartingPoint + CGFloat(column) * columnStartingPoint, y: rowStartingPoint - CGFloat(row) * frame.midY/2)
 				levelBoxButton.zPosition = ZPosition.hudBackground
-				
 				addChild(levelBoxButton)
 				
 				let levelLabel = SKLabelNode(fontNamed: "AvenirNext-Bold")
@@ -44,7 +49,5 @@ class LevelScene: SKScene {
 	
 	func goToGameSceneFor(level: Int) {
 		sceneManagerDelegate?.presentGameSceneFor(level: level)
-		
-		
 	}
 }

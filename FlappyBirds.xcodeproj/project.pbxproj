@@ -11,7 +11,19 @@
 		271A3A851FDB03CA007BCBEC /* BirdTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 271A3A841FDB03CA007BCBEC /* BirdTileSet.sks */; };
 		271A3A8D1FDB0FDC007BCBEC /* GameCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A3A8C1FDB0FDC007BCBEC /* GameCamera.swift */; };
 		27497F521FE8263C007845DD /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27497F511FE8263C007845DD /* SKNode+Extensions.swift */; };
+		2753578E1FFFA274001C43CE /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753578D1FFFA274001C43CE /* Enemy.swift */; };
 		275596A61FDEF536000A1ADD /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275596A51FDEF536000A1ADD /* Block.swift */; };
+		276618521FFF6AA60069A01E /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276618511FFF6AA60069A01E /* Levels.plist */; };
+		276618541FFF6F240069A01E /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276618531FFF6F240069A01E /* LevelData.swift */; };
+		277545131FFF4E540028379A /* GameScene_2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 277545121FFF4E540028379A /* GameScene_2.sks */; };
+		277545151FFF4F740028379A /* GameScene_3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 277545141FFF4F740028379A /* GameScene_3.sks */; };
+		277545171FFF4FB00028379A /* GameScene_4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 277545161FFF4FB00028379A /* GameScene_4.sks */; };
+		277545191FFF4FEF0028379A /* GameScene_5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 277545181FFF4FEF0028379A /* GameScene_5.sks */; };
+		2775451B1FFF4FF90028379A /* GameScene_6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2775451A1FFF4FF90028379A /* GameScene_6.sks */; };
+		2775451D1FFF50070028379A /* GameScene_7.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2775451C1FFF50070028379A /* GameScene_7.sks */; };
+		2775451F1FFF50130028379A /* GameScene_8.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2775451E1FFF50130028379A /* GameScene_8.sks */; };
+		277545211FFF501E0028379A /* GameScene_9.sks in Resources */ = {isa = PBXBuildFile; fileRef = 277545201FFF501E0028379A /* GameScene_9.sks */; };
+		277545241FFF56070028379A /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277545231FFF56070028379A /* AnimationHelper.swift */; };
 		27A104091FDC904E00BB1683 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A104081FDC904E00BB1683 /* Configuration.swift */; };
 		27C07BE31FFAED1B0084B811 /* SpriteKitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */; };
 		27C77F171FF96EA400EDE264 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C77F161FF96EA400EDE264 /* MenuScene.swift */; };
@@ -30,7 +42,19 @@
 		271A3A841FDB03CA007BCBEC /* BirdTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BirdTileSet.sks; sourceTree = "<group>"; };
 		271A3A8C1FDB0FDC007BCBEC /* GameCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCamera.swift; sourceTree = "<group>"; };
 		27497F511FE8263C007845DD /* SKNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Extensions.swift"; sourceTree = "<group>"; };
+		2753578D1FFFA274001C43CE /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		275596A51FDEF536000A1ADD /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		276618511FFF6AA60069A01E /* Levels.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
+		276618531FFF6F240069A01E /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
+		277545121FFF4E540028379A /* GameScene_2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene_2.sks; path = FlappyBirds/GameScene_2.sks; sourceTree = SOURCE_ROOT; };
+		277545141FFF4F740028379A /* GameScene_3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_3.sks; sourceTree = "<group>"; };
+		277545161FFF4FB00028379A /* GameScene_4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_4.sks; sourceTree = "<group>"; };
+		277545181FFF4FEF0028379A /* GameScene_5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_5.sks; sourceTree = "<group>"; };
+		2775451A1FFF4FF90028379A /* GameScene_6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_6.sks; sourceTree = "<group>"; };
+		2775451C1FFF50070028379A /* GameScene_7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_7.sks; sourceTree = "<group>"; };
+		2775451E1FFF50130028379A /* GameScene_8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_8.sks; sourceTree = "<group>"; };
+		277545201FFF501E0028379A /* GameScene_9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_9.sks; sourceTree = "<group>"; };
+		277545231FFF56070028379A /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		27A104081FDC904E00BB1683 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitButton.swift; sourceTree = "<group>"; };
 		27C77F161FF96EA400EDE264 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
@@ -105,9 +129,11 @@
 		271A3A8B1FDB0FA9007BCBEC /* Custom Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */,
 				271A3A8C1FDB0FDC007BCBEC /* GameCamera.swift */,
 				2709DEB91FDD77CC005C24A3 /* Bird.swift */,
 				275596A51FDEF536000A1ADD /* Block.swift */,
+				2753578D1FFFA274001C43CE /* Enemy.swift */,
 			);
 			path = "Custom Nodes";
 			sourceTree = "<group>";
@@ -116,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				27497F511FE8263C007845DD /* SKNode+Extensions.swift */,
-				27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,14 +150,31 @@
 			isa = PBXGroup;
 			children = (
 				27C9664F1FDAFA6D00499A0B /* GameScene_1.sks */,
+				277545121FFF4E540028379A /* GameScene_2.sks */,
+				277545141FFF4F740028379A /* GameScene_3.sks */,
+				277545161FFF4FB00028379A /* GameScene_4.sks */,
+				277545181FFF4FEF0028379A /* GameScene_5.sks */,
+				2775451A1FFF4FF90028379A /* GameScene_6.sks */,
+				2775451C1FFF50070028379A /* GameScene_7.sks */,
+				2775451E1FFF50130028379A /* GameScene_8.sks */,
+				277545201FFF501E0028379A /* GameScene_9.sks */,
+				276618511FFF6AA60069A01E /* Levels.plist */,
 			);
 			path = Levels;
+			sourceTree = "<group>";
+		};
+		277545221FFF55640028379A /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				277545231FFF56070028379A /* AnimationHelper.swift */,
+				276618531FFF6F240069A01E /* LevelData.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 		27C966411FDAFA6D00499A0B = {
 			isa = PBXGroup;
 			children = (
-				27497F501FE82609007845DD /* Extensions */,
 				27C9664C1FDAFA6D00499A0B /* FlappyBirds */,
 				27C9664B1FDAFA6D00499A0B /* Products */,
 			);
@@ -149,14 +191,16 @@
 		27C9664C1FDAFA6D00499A0B /* FlappyBirds */ = {
 			isa = PBXGroup;
 			children = (
-				275DE11D1FFC2DFF00C651FD /* Levels */,
-				271A3A8B1FDB0FA9007BCBEC /* Custom Nodes */,
 				27C9665F1FDAFA6D00499A0B /* Info.plist */,
+				277545221FFF55640028379A /* Helper Files */,
+				275DE11D1FFC2DFF00C651FD /* Levels */,
+				27497F501FE82609007845DD /* Extensions */,
+				271A3A8B1FDB0FA9007BCBEC /* Custom Nodes */,
 				271A3A8A1FDB0B09007BCBEC /* TileSets */,
+				271A3A861FDB0A58007BCBEC /* UI */,
 				271A3A891FDB0A85007BCBEC /* Scenes */,
 				271A3A881FDB0A6A007BCBEC /* ViewController */,
 				271A3A871FDB0A62007BCBEC /* Template */,
-				271A3A861FDB0A58007BCBEC /* UI */,
 			);
 			path = FlappyBirds;
 			sourceTree = "<group>";
@@ -221,8 +265,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				271A3A851FDB03CA007BCBEC /* BirdTileSet.sks in Resources */,
+				277545171FFF4FB00028379A /* GameScene_4.sks in Resources */,
 				27C966591FDAFA6D00499A0B /* Main.storyboard in Resources */,
+				2775451B1FFF4FF90028379A /* GameScene_6.sks in Resources */,
+				277545191FFF4FEF0028379A /* GameScene_5.sks in Resources */,
+				2775451D1FFF50070028379A /* GameScene_7.sks in Resources */,
+				277545151FFF4F740028379A /* GameScene_3.sks in Resources */,
 				27C966501FDAFA6D00499A0B /* GameScene_1.sks in Resources */,
+				277545211FFF501E0028379A /* GameScene_9.sks in Resources */,
+				277545131FFF4E540028379A /* GameScene_2.sks in Resources */,
+				2775451F1FFF50130028379A /* GameScene_8.sks in Resources */,
+				276618521FFF6AA60069A01E /* Levels.plist in Resources */,
 				27C9665B1FDAFA6D00499A0B /* Assets.xcassets in Resources */,
 				27C9665E1FDAFA6D00499A0B /* LaunchScreen.storyboard in Resources */,
 			);
@@ -235,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2753578E1FFFA274001C43CE /* Enemy.swift in Sources */,
+				276618541FFF6F240069A01E /* LevelData.swift in Sources */,
 				27C966541FDAFA6D00499A0B /* GameScene.swift in Sources */,
 				27497F521FE8263C007845DD /* SKNode+Extensions.swift in Sources */,
 				275596A61FDEF536000A1ADD /* Block.swift in Sources */,
@@ -243,6 +298,7 @@
 				27A104091FDC904E00BB1683 /* Configuration.swift in Sources */,
 				27C966561FDAFA6D00499A0B /* GameViewController.swift in Sources */,
 				271A3A8D1FDB0FDC007BCBEC /* GameCamera.swift in Sources */,
+				277545241FFF56070028379A /* AnimationHelper.swift in Sources */,
 				2709DEBA1FDD77CC005C24A3 /* Bird.swift in Sources */,
 				27C9664E1FDAFA6D00499A0B /* AppDelegate.swift in Sources */,
 				27C77F191FF96EC900EDE264 /* LevelScene.swift in Sources */,

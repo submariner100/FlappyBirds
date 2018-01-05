@@ -24,18 +24,31 @@ class GameScene: SKScene {
 	var maxScale: CGFloat = 0
 	
 	var bird = Bird(type: .red)
-	var birds = [
-		Bird(type: .red),
-		Bird(type: .blue),
-		Bird(type: .yellow)
-	]
+	var birds = [Bird]()
 	let anchor = SKNode()
-	var roundState = RoundState.ready
 	
+	var level: Int?
+	
+	var roundState = RoundState.ready
 	
 	
     override func didMove(to view: SKView) {
 	physicsWorld.contactDelegate = self
+	
+	guard let level = level else {
+		return
+
+	}
+	guard  let levelData = LevelData(level:level) else {
+		return
+	}
+	for birdColor in levelData.birds {
+		if let newBirdType = BirdType(rawValue: birdColor) {
+			birds.append(Bird(type: newBirdType))
+			
+		}
+	}
+	
 	setupLevel()
 	setupGestureRecognizers()
 	
@@ -50,7 +63,6 @@ class GameScene: SKScene {
 						panRecognizer.isEnabled = false
 						bird.grabbed = true
 						bird.position = location
-						
 			}
 		}
 		case .flying:
@@ -124,9 +136,6 @@ class GameScene: SKScene {
 				block.createPhysicsBody()
 				mapNode.addChild(block)
 				child.removeFromParent()
-				
-				
-				
 			}
 		}
 		
@@ -140,6 +149,7 @@ class GameScene: SKScene {
 		
 		anchor.position = CGPoint(x: mapNode.frame.midX/2, y: mapNode.frame.midY/2)
 		addChild(anchor)
+		addSlingshot()
 		addBird()
 	
 	}
@@ -150,6 +160,15 @@ class GameScene: SKScene {
 		gameCamera.position = CGPoint(x: view.bounds.size.width/2, y: view.bounds.size.height/2)
 		camera = gameCamera
 		gameCamera.setConstraints(with: self, and: mapNode.frame, to: nil)
+	}
+	
+	func addSlingshot() {
+		let slingshot = SKSpriteNode(imageNamed: "slingshot")
+		let scaleSize = CGSize(width: 0, height: mapNode.frame.midY/2 - mapNode.tileSize.height/2)
+		slingshot.aspectScale(to: scaleSize, width: false, multiplier: 1.0)
+		slingshot.position = CGPoint(x: anchor.position.x, y: mapNode.tileSize.height + slingshot.size.height/2)
+		slingshot.zPosition = ZPosition.obstacles
+		mapNode.addChild(slingshot)
 	}
 	
 	func addBird() {
@@ -164,8 +183,9 @@ class GameScene: SKScene {
 		bird.physicsBody?.collisionBitMask = PhysicsCategory.block | PhysicsCategory.edge
 		bird.physicsBody?.isDynamic = false
 		bird.position = anchor.position
+		bird.zPosition = ZPosition.bird
 		addChild(bird)
-		bird.aspectScale(to: mapNode.tileSize, width: false, multiplier: 1.0)
+		bird.aspectScale(to: mapNode.tileSize, width: true, multiplier: 1.0)
 		constraintToAnchor(active: true)
 		roundState = .ready
 		
@@ -203,6 +223,11 @@ extension GameScene: SKPhysicsContactDelegate {
 				block.impact(with: Int(contact.collisionImpulse))
 			} else if let block = contact.bodyA.node as? Block {
 				block.impact(with: Int(contact.collisionImpulse))
+			}
+			if let bird = contact.bodyA.node as? Bird {
+				bird.flying = false
+			} else if let bird = contact.bodyB.node as? Bird {
+				bird.flying = false
 			}
 		case PhysicsCategory.block | PhysicsCategory.block:
 			if let block = contact.bodyA.node as? Block {

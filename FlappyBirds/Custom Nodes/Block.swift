@@ -18,7 +18,6 @@ class Block: SKSpriteNode {
 	var health: Int
 	let damageThreshold: Int
 	
-	
 	init(type: BlockType) {
 		self.type = type
 		switch type {
