@@ -25,6 +25,13 @@ class GameScene: SKScene {
 	
 	var bird = Bird(type: .red)
 	var birds = [Bird]()
+	var enemies = 0 {
+		didSet {
+			if enemies < 1 {
+				print("All Enemies Hit")
+			}
+		}
+	}
 	let anchor = SKNode()
 	
 	var level: Int?
@@ -120,22 +127,25 @@ class GameScene: SKScene {
 		if let mapNode = childNode(withName: "Tile Map Node") as? SKTileMapNode {
 			self.mapNode = mapNode
 			maxScale = mapNode.mapSize.width/frame.size.width
-			
 		}
-		
 		for child in mapNode.children {
 			if let child  = child as? SKSpriteNode {
 				guard let name = child.name else { continue }
-				if !["wood", "stone", "glass"].contains(name) { continue }
-				guard let type = BlockType(rawValue: name) else { continue }
-				let block = Block(type: type)
-				block.size = child.size
-				block.position = child.position
-				block.zRotation = child.zRotation
-				block.zPosition = ZPosition.obstacles
-				block.createPhysicsBody()
-				mapNode.addChild(block)
-				child.removeFromParent()
+				switch name {
+				case "wood","stone","glass":
+					if let block = createBlock(from: child, name: name) {
+						mapNode.addChild(block)
+						child.removeFromParent()
+					}
+				case "orange":
+					if let enemy = createBlock(from: child, name: name) {
+						mapNode.addChild(enemy)
+						enemies += 1
+						child.removeFromParent()
+					}
+				default:
+					break
+				}
 			}
 		}
 		
@@ -173,7 +183,7 @@ class GameScene: SKScene {
 	
 	func addBird() {
 		if birds.isEmpty {
-			print("No more birds")
+			print("GameOver")
 			return
 		}
 		bird = birds.removeFirst()
@@ -188,8 +198,26 @@ class GameScene: SKScene {
 		bird.aspectScale(to: mapNode.tileSize, width: true, multiplier: 1.0)
 		constraintToAnchor(active: true)
 		roundState = .ready
-		
-		
+	}
+	
+	func createBlock(from placeholder: SKSpriteNode, name: String) -> Block? {
+		guard let type = BlockType(rawValue: name) else { return nil }
+		let block = Block(type: type)
+		block.size = placeholder.size
+		block.position = placeholder.position
+		block.zRotation = placeholder.zRotation
+		block.zPosition = ZPosition.obstacles
+		block.createPhysicsBody()
+		return block
+	}
+	
+	func createEnemy(from placeholder: SKSpriteNode, name: String) -> Enemy? {
+		guard let enemyType = EnemyType(rawValue: name) else { return nil }
+		let enemy = Enemy(type: enemyType)
+		enemy.size = placeholder.size
+		enemy.position = placeholder.position
+		enemy.createPhysicsBody()
+		return enemy
 	}
 	
 	func constraintToAnchor(active: Bool) {
@@ -238,6 +266,17 @@ extension GameScene: SKPhysicsContactDelegate {
 			}
 		case PhysicsCategory.bird | PhysicsCategory.edge:
 			bird.flying = false
+			
+		case PhysicsCategory.bird | PhysicsCategory.enemy:
+			if let enemy = contact.bodyA.node as? Enemy {
+				if enemy.impact(with: Int(contact.collisionImpulse)) {
+					enemies -= 1
+				}
+			} else if let enemy = contact.bodyB.node as? Enemy {
+				if enemy.impact(with: Int(contact.collisionImpulse)) {
+					enemies -= 1
+				}
+			}
 		default:
 			break
 		}
@@ -271,12 +310,7 @@ extension GameScene {
 				gameCamera.position = newPosition
 				sender.scale = 1.0
 				gameCamera.setConstraints(with: self, and: mapNode.frame, to: nil)
-				
-				
 			}
 		}
 	}
-	
-	
-	
 }

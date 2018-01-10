@@ -24,6 +24,7 @@
 		2775451F1FFF50130028379A /* GameScene_8.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2775451E1FFF50130028379A /* GameScene_8.sks */; };
 		277545211FFF501E0028379A /* GameScene_9.sks in Resources */ = {isa = PBXBuildFile; fileRef = 277545201FFF501E0028379A /* GameScene_9.sks */; };
 		277545241FFF56070028379A /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277545231FFF56070028379A /* AnimationHelper.swift */; };
+		278267E72006B3EA00D62798 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278267E62006B3EA00D62798 /* Popup.swift */; };
 		27A104091FDC904E00BB1683 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A104081FDC904E00BB1683 /* Configuration.swift */; };
 		27C07BE31FFAED1B0084B811 /* SpriteKitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */; };
 		27C77F171FF96EA400EDE264 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C77F161FF96EA400EDE264 /* MenuScene.swift */; };
@@ -55,6 +56,7 @@
 		2775451E1FFF50130028379A /* GameScene_8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_8.sks; sourceTree = "<group>"; };
 		277545201FFF501E0028379A /* GameScene_9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene_9.sks; sourceTree = "<group>"; };
 		277545231FFF56070028379A /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		278267E62006B3EA00D62798 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		27A104081FDC904E00BB1683 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		27C07BE21FFAED1B0084B811 /* SpriteKitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitButton.swift; sourceTree = "<group>"; };
 		27C77F161FF96EA400EDE264 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2709DEB91FDD77CC005C24A3 /* Bird.swift */,
 				275596A51FDEF536000A1ADD /* Block.swift */,
 				2753578D1FFFA274001C43CE /* Enemy.swift */,
+				278267E62006B3EA00D62798 /* Popup.swift */,
 			);
 			path = "Custom Nodes";
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				271A3A8D1FDB0FDC007BCBEC /* GameCamera.swift in Sources */,
 				277545241FFF56070028379A /* AnimationHelper.swift in Sources */,
 				2709DEBA1FDD77CC005C24A3 /* Bird.swift in Sources */,
+				278267E72006B3EA00D62798 /* Popup.swift in Sources */,
 				27C9664E1FDAFA6D00499A0B /* AppDelegate.swift in Sources */,
 				27C77F191FF96EC900EDE264 /* LevelScene.swift in Sources */,
 			);
