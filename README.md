@@ -11,4 +11,7 @@ so that the wings are moving when flying through the air. Creating an new plist 
 birds are used within each scene. Added a slingshot for the beginning of the flappy birds journey. Added a menu Background when the user
 first starts the application.
 7/ Added a couple of enemies for the flappy birds to avoid. added all the physics.
+8/ code for 3 menu buttons added. The buttons are called MenuButton, NextButton and RetryButton. These will appear as popup buttons
+on the background.
+
 
