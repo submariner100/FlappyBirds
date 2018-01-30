@@ -8,6 +8,13 @@
 
 import SpriteKit
 
+protocol PopupButtonHandlerDelegate {
+	func menuTapped()
+	func nextTapped()
+	func retryTapped()
+	
+}
+
 struct PopupButtons {
 	static let menu = 0
 	static let next = 1
@@ -18,6 +25,7 @@ struct PopupButtons {
 class Popup: SKSpriteNode {
 	
 	let type: Int
+	var popupButtonHandlerDelegate: PopupButtonHandlerDelegate?
 	
 	init(type: Int, size: CGSize) {
 		self.type = type
@@ -55,7 +63,12 @@ class Popup: SKSpriteNode {
 	}
 	
 	func popupButtonsHandler(index: Int) {
-		
+		switch index {
+		case <#pattern#>:
+			<#code#>
+		default:
+			<#code#>
+		}
 		
 		
 		
