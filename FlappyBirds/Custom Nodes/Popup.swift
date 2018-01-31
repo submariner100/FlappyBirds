@@ -64,15 +64,17 @@ class Popup: SKSpriteNode {
 	
 	func popupButtonsHandler(index: Int) {
 		switch index {
-		case <#pattern#>:
-			<#code#>
+		case PopupButtons.menu:
+			popupButtonHandlerDelegate?.menuTapped()
+		case PopupButtons.next:
+			popupButtonHandlerDelegate?.nextTapped()
+		case PopupButtons.retry:
+			popupButtonHandlerDelegate?.retryTapped()
 		default:
-			<#code#>
+			break
 		}
-		
-		
-		
 	}
+	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}

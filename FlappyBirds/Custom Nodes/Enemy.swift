@@ -27,6 +27,7 @@ class Enemy: SKSpriteNode {
 		case .orange:
 			health = 100
 		}
+		
 		let texture = SKTexture(imageNamed: type.rawValue + "1")
 		super.init(texture: texture, color: UIColor.clear, size: CGSize.zero)
 		animateEnemy()
