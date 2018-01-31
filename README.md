@@ -14,5 +14,7 @@ first starts the application.
 8/ code for 3 menu buttons added. The buttons are called MenuButton, NextButton and RetryButton. These will appear as popup buttons
 on the background.
 9/ PopButtons added and working.
+10/ Protocol added for the popOver buttons. This is the last upsdate for this project. My version of Flappy Birds.
+
 
 
